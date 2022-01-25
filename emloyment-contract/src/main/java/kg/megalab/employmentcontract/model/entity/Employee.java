@@ -5,6 +5,7 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -28,6 +29,17 @@ public class Employee extends AbstractPersistable {
     @ManyToOne
     @JoinColumn(name = "position_id", referencedColumnName = "id")
     Position position;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id", referencedColumnName = "id")
+    Address address;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "characteristics_id", referencedColumnName = "id")
+    Characteristics characteristics;
+
+    @OneToMany(mappedBy = "employee")
+    List<EmployeesInProject> employeesInProjects;
 
     @Column(name = "is_active", columnDefinition = "BOOLEAN DEFAULT TRUE")
     Boolean isActive;
