@@ -17,6 +17,7 @@ public class EmployeeDto {
     String patronymic;
     PositionDto position;
     AddressDto address;
+    CharacteristicsDto characteristics;
     List<EmployeesInProjectDto> employeesInProjects;
     Boolean isActive;
 

@@ -5,6 +5,7 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -16,13 +17,19 @@ import javax.persistence.*;
 @EqualsAndHashCode(callSuper = true)
 public class Characteristics  extends AbstractPersistable {
 
+    @ElementCollection
     @Column(name = "soft_skills", nullable = true)
-    String softSkills;
+    List<String> softSkills;
 
+    @ElementCollection
     @Column(name = "hard_skills", nullable = true)
-    String hardSkills;
+    List<String> hardSkills;
 
+    @ElementCollection
     @Column(name = "languages", nullable = true)
-    String languages;
+    List<String> languages;
+
+    @Column(name = "is_active", columnDefinition = "true")
+    Boolean isActive;
 
 }

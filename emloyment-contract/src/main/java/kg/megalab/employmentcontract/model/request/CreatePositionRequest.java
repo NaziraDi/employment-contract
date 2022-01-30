@@ -1,4 +1,4 @@
-package kg.megalab.employmentcontract.model.dto;
+package kg.megalab.employmentcontract.model.request;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -8,9 +8,6 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class PositionDto {
-    Long id;
+public class CreatePositionRequest {
     String positionTitle;
-    Boolean isActive;
-
 }

@@ -1,9 +1,8 @@
-package kg.megalab.employmentcontract.model.dto;
+package kg.megalab.employmentcontract.model.request;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.Column;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -12,11 +11,9 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class SalaryDto {
-    Long id;
+public class CreateSalaryRequest {
     BigDecimal amount;
     LocalDate startDate;
     LocalDate endDate;
     Long employeeId;
-    Boolean isActive;
 }

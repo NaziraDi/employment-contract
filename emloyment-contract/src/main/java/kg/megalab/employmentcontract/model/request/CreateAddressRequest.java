@@ -1,4 +1,4 @@
-package kg.megalab.employmentcontract.model.dto;
+package kg.megalab.employmentcontract.model.request;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -8,13 +8,11 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class AddressDto {
-    Long id;
+public class CreateAddressRequest {
     String country;
     String city;
     String street;
     String house;
     Integer apartment;
     Integer postcode;
-
 }

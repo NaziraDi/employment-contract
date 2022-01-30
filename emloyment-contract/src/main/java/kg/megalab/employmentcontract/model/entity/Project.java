@@ -5,6 +5,7 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -22,12 +23,15 @@ public class Project extends AbstractPersistable {
     String projectName;
 
     @Column(name = "start_date")
-    Date startDate;
+    LocalDate startDate;
 
     @Column(name = "end_date")
-    Date endDate;
+    LocalDate endDate;
+
+    @Column(name = "is_acitve", columnDefinition = "True")
+    Boolean isActive;
 
     @OneToMany(mappedBy = "project")
-    List<EmployeesInProject> employeesInProjects;
+    List<EmployeesInProject> employeesInProject;
 
 }

@@ -17,11 +17,11 @@ import javax.persistence.*;
 public class EmployeesInProject extends AbstractPersistable {
 
     @ManyToOne
-    @JoinColumn(name = "employee_id")
+    @JoinColumn(name = "employee_id", referencedColumnName = "id")
     Employee employee;
 
     @ManyToOne
-    @JoinColumn(name = "project_id")
+    @JoinColumn(name = "project_id", referencedColumnName = "id")
     Project project;
 
     @Column(name = "days_in_project")

@@ -39,7 +39,7 @@ public class Employee extends AbstractPersistable {
     Characteristics characteristics;
 
     @OneToMany(mappedBy = "employee")
-    List<EmployeesInProject> employeesInProjects;
+    List<EmployeesInProject> employeeInProjects;
 
     @Column(name = "is_active", columnDefinition = "BOOLEAN DEFAULT TRUE")
     Boolean isActive;

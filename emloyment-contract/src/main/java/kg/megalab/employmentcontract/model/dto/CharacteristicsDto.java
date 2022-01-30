@@ -3,15 +3,17 @@ package kg.megalab.employmentcontract.model.dto;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.List;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class CharacteristicDto {
+public class CharacteristicsDto {
     Long id;
-    String softSkills;
-    String hardSkills;
-    String languages;
-    EmployeeDto employee;
+    List<String> softSkills;
+    List<String> hardSkills;
+    List<String> languages;
+
 }

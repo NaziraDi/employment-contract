@@ -37,4 +37,7 @@ public class Address extends AbstractPersistable {
     @Column(name = "postcode", nullable = false)
     Integer postcode;
 
+    @Column(name = "is_active", columnDefinition = "true")
+    Boolean isActive;
+
 }
